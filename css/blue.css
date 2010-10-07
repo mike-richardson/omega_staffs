@@ -1,0 +1,47 @@
+/* ###### declare variables ###### */
+/* colours */
+/* pantone 383c */
+/* typography */
+/* client requested Verdana */
+#page * {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+#menu ul li.selected a,
+#menu ul li.active a,
+#menu ul li.selected a:visited,
+#menu ul li.active a:visited,
+#menu ul li.selected a:active,
+#menu ul li.active a:active,
+#menu ul li.selected a:hover,
+#menu ul li.active a:hover,
+#menu ul li.selected a:visited:hover,
+#menu ul li.active a:visited:hover {
+  background: url(../images/menu-selected-blue.jpg) 0 0 repeat-x;
+  border-left: 1px solid #00709e;
+  border-right: 1px solid #00709e;
+}
+#banner {
+  background: #00709e url(../images/banner-background-blue.jpg) repeat-x;
+}
+#preface-wrapper {
+  background: url(../images/title-background-blue.jpg) bottom left no-repeat;
+}
+.ribbon {
+  background: transparent url(../images/ribbon-blue.png) 0 0 no-repeat;
+}
+#main-wrapper h1.title {
+  background: url(../images/split-background-blue.jpg) 0 0 repeat-x;
+}
+/* ##### forms and form elements #### */
+input.form-submit {
+  color: #fff;
+  background: #00709e;
+  border: 1px solid #00709e;
+}
+input.form-submit:hover {
+  background-color: #0290ca;
+}
+/* ##### stockton-specific stuff ##### */
+#content-bottom {
+  text-align: right;
+}
