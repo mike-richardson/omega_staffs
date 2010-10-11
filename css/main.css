@@ -27,10 +27,18 @@ a, a:link {
   color: #00709e;
 }
 a:visited {
-  color: #2341ce;
+  color: #16567e;
 }
 a:hover, a:visited:hover {
   color: #0290ca;
+}
+a:active {
+  position: relative;
+  top: 1px;
+}
+a.mail-link {
+  padding-left: 20px;
+  background: transparent url(../images/icons/email.png) 0 0 no-repeat;
 }
 /* ###### header section ###### */
 #header {
@@ -120,7 +128,7 @@ a:hover, a:visited:hover {
   margin-top: 100px;
 }
 #preface-first #mission h2 {
-  text-shadow: 1px 1px 3px #555;
+  text-shadow: 2px 2px 3px #bfd9e6;
 }
 #preface-first img.logo {
   height: 92px;
@@ -145,7 +153,7 @@ img.logo, img.shadow {
   margin-bottom: 0;
   margin-top: 25px;
   margin-right: 10px;
-  text-shadow: 0px 2px 2px #555;
+  text-shadow: 2px 2px 3px #bfd9e6;
 }
 .not-front #preface-last {
   text-align: right;
@@ -175,6 +183,13 @@ img.logo, img.shadow {
 }
 .not-front #main-content {
   padding-bottom: 20px;
+}
+#a-to-z {
+  font-size: 1.4em;
+  text-align: right;
+}
+body.path-evince.path-dir #a-to-z {
+  float: right;
 }
 /* ###### footer stuff ###### */
 #outer-postscript-wrapper {
@@ -253,7 +268,45 @@ img.logo, img.shadow {
 }
 /* ###### lists ###### */
 #main-content ol, #main-content ul {
-  margin-left: 2.5em;
+  margin-left: 20px;
+}
+#main-content .item-list ul {
+  margin-left: 0;
+}
+#main-content .item-list ul ul {
+  margin-left: 20px;
+}
+#main-content ul#tablinks {
+  list-style: none;
+  margin-left: 0;
+}
+#main-content .item-list ul.pager {
+  margin-bottom: 0;
+  padding: 10px 0;
+  background: #f2fdfb;
+}
+#main-content .item-list ul.pager li {
+  font-size: 1.4em;
+  line-height: 1;
+  color: #000;
+  padding: 3px 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#main-content .item-list ul.pager li a, #main-content .item-list ul.pager li a.active {
+  color: #00709e;
+}
+#main-content .item-list ul.pager li a:hover,
+#main-content .item-list ul.pager li a.active:hover,
+#main-content .item-list ul.pager li a:visited:hover,
+#main-content .item-list ul.pager li a.active:visited:hover {
+  text-decoration: underline;
+  color: #bfd9e6;
+}
+#main-content .item-list ul.pager li.pager-current {
+  color: #fff;
+  background-color: #00709e;
 }
 /* ###### images ##### */
 img {
@@ -273,14 +326,19 @@ fieldset#fs-search legend {
 }
 fieldset#fs-search .form-item {
   margin: 0;
-  width: 460px;
+  width: 440px;
   float: left;
-  margin-right: 20px;
+  margin-right: 0;
 }
 fieldset#fs-search .form-text {
-  width: 458px;
-  border: 1px solid #00709e;
+  width: 438px;
   font-size: 1.2em;
+}
+#quicksearch {
+  margin-bottom: 20px;
+}
+#quicksearch fieldset#fs-search .form-item {
+  margin-right: 20px;
 }
 input.form-submit {
   padding: 3px 10px;
@@ -290,23 +348,23 @@ input.form-submit {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-shadow: #bfd9e6 1px 1px 3px;
+}
+input.form-submit:active {
+  position: relative;
+  top: 1px;
+}
+#content-top .form-submit {
+  float: right;
 }
 input.form-submit:hover {
   cursor: pointer;
-}
-.sidebar fieldset#fs-search .form-item {
-  width: 220px;
-  float: none;
-  margin-bottom: 5px;
-  margin-right: 0;
-}
-.sidebar fieldset#fs-search .form-text {
-  width: 218px;
 }
 /* ###### section-specific styles ###### */
 /* category page */
 .path-category .item-list  ul li {
   font-size: 2em;
+  color: #00709e;
   list-style: none;
   margin-left: 0;
 }
@@ -318,26 +376,50 @@ input.form-submit:hover {
 /* A to Z page */
 .page-evince-dir-atoz #main-content a, .page-evince-dir-atoz #main-content a:visited, a.atoz-link {
   font-size: 1.8em;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: block;
+  float: left;
   text-decoration: none;
+  padding: 5px;
+  line-height: 1;
+  background: #f2fdfb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+a.atoz-link:hover {
+  background: #bfd9e6;
 }
 a.atoz-link.active {
-  color: #000;
+  color: #fff;
+  background: #00709e;
 }
-td a.atoz-link {
+td a.atoz-link, td a.atoz-link:hover {
   font-size: 1.4em;
+  line-height: 1.2;
+  background-color: transparent;
+  padding: 0;
+  float: none;
+}
+/* directory pages */
+div#numentries {
+  position: relative;
+  top: -1em;
 }
 /* ###### tables ######## */
 th, td {
   padding: 5px;
 }
 thead th {
-  font-size: 1.4em;
-  border-bottom-color: #a8cdfc;
+  font-size: 1.3em;
+  border-bottom-color: #bfd9e6;
+  background: #00709e;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.496094) 0px -1px 1px;
 }
 tr.even, tr.odd {
-  border-bottom-color: #a8cdfc;
+  border-bottom-color: #bfd9e6;
 }
 tr.even {
   background-color: #fff;
@@ -378,6 +460,130 @@ tr.odd {
 #bcrumb .breadcrumb {
   font-size: 1em;
   margin: 0 10px 10px 10px;
+}
+.grid-16 #edart {
+  width: 940px;
+  clear: both;
+}
+/* evince tab view overrides */
+div#filters {
+  float: left;
+  display: inline;
+  position: relative;
+  width: 220px;
+  margin-right: 20px;
+}
+div#tabbed {
+  width: 700px;
+  display: inline;
+  position: relative;
+}
+.sfmtab table {
+  margin-bottom: 0;
+}
+.sfmtab .view-header {
+  padding: 5px;
+}
+.sfmtab .view-header h3 {
+  margin: 0;
+}
+.sfmtab .view-header pre {
+  display: none;
+}
+#filters fieldset {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0 0 10px 0;
+  background: #f2fdfb;
+}
+#filters fieldset legend {
+  display: block;
+  padding: 5px 10px;
+  width: 200px;
+  margin: 0 -1px;
+  background: #00709e;
+}
+#filters fieldset .form-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#filters fieldset .form-item .form-item {
+  margin-left: 0;
+  margin-right: 0;
+}
+#filters fieldset .form-text {
+  padding: 2px;
+  width: 192px;
+}
+#filters fieldset .form-submit {
+  margin-left: 10px;
+}
+#filters fieldset label {
+  color: #00709e;
+}
+#filters fieldset label:hover {
+  color: #0290ca;
+  cursor: pointer;
+}
+legend a, legend a:visited {
+  color: #fff;
+}
+/* ######  calendar  ###### */
+#main-content .calendar-calendar ul.links {
+  margin: 0 5px 5px 5px;
+}
+#main-content .calendar-calendar div.date-nav {
+  background-color: #00709e;
+  border: none;
+  border-top: 1px solid #bfd9e6;
+  color: #fff;
+  padding: 5px;
+  width: auto;
+}
+#main-content .calendar-calendar div.date-nav a, #main-content .calendar-calendar div.date-nav a:visited {
+  color: #f2fdfb;
+}
+#main-content .calendar-calendar div.date-nav a:hover, #main-content .calendar-calendar div.date-nav a:visited:hover {
+  color: #fff;
+}
+#main-content .calendar-calendar div.date-nav h3 {
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.496094) 0px -1px 1px;
+  font-weight: bold;
+}
+.calendar-calendar th.days, .calendar-calendar td {
+  border-color: #bfd9e6;
+}
+.calendar-calendar th.days, .calendar-calendar th {
+  background-color: #f2fdfb;
+  font-weight: normal;
+  color: #16567e;
+  text-shadow: rgba(255, 255, 255, 0.496094) 0px -1px 1px;
+  border-bottom-color: #bfd9e6;
+}
+.calendar-calendar td.empty {
+  background-color: #bfd9e6;
+  border-color: #bfd9e6;
+}
+.calendar-calendar td .inner div, .calendar-calendar td .inner div a {
+  background-color: #f2fdfb;
+}
+#main-content .calendar-calendar div.day {
+  border-color: #bfd9e6;
+}
+#main-content  .calendar-calendar td.today {
+  background-color: #f2fdfb;
+}
+#main-content  .calendar-calendar td.today .inner div.day {
+  background-color: #00709e;
+  border-color: #00709e;
+}
+#main-content  .calendar-calendar td.today .inner div.day a, #main-content  .calendar-calendar td.today .inner div.day a:visited {
+  color: #fff;
+  background-color: #00709e;
+}
+#main-content  .calendar-calendar td.today .inner div.day a:hover, #main-content  .calendar-calendar td.today .inner div.day a:visited:hover {
+  color: #f2fdfb;
 }
 /* ###### temporary stuff ###### */
 div.error {
