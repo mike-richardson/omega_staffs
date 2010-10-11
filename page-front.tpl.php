@@ -103,11 +103,19 @@
     
     <div id="main-content-container" class="container-<?php print $content_container_width; ?> clearfix">
       <div id="main-wrapper" class="column <?php print $main_content_classes; ?>">
+       <div class="clearfix">
         <?php if($content_top): ?>
-        <div id="content-top">
+        <div id="content-top" class="grid-10 alpha">
           <?php print $content_top; ?>
         </div><!-- /#content-top -->
         <?php endif; ?>
+        
+        <?php if($a_to_z): ?>
+        <div id="a-to-z" class="grid-6 omega">
+          <?php print $a_to_z; ?>
+        </div><!-- /#a_to_z -->
+        <?php endif; ?>
+        </div>
         <?php if ($tabs): ?>
           <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
         <?php endif; ?>

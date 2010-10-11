@@ -12,10 +12,15 @@ base theme = omega
 
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/blue.css
-
+stylesheets[all][] = css/tipTip.css
 ; ------- Declare default javascript includes
 
+
+scripts[] = js/jquery.tipTip.js
+scripts[] = js/glossy.js
+scripts[] = js/jquery.lazyload.mini.js
 scripts[] = js/scripts.js
+
 
 
 ; ------- Declare default theme regions
@@ -32,6 +37,8 @@ regions[preface_last] = preface last
 
 regions[content_top] = content top
 regions[content_bottom] = content bottom
+
+regions[a_to_z] = A to Z block
 
 regions[postscript_one] = postscript 1
 regions[postscript_two] = postscript 2
